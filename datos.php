@@ -24,5 +24,6 @@ if (isset($_POST["email"])) { // si isset devuelve true, significa que el campo 
     $email   = $_POST["email"];
 }
 
-echo $nombre." ".$apellido." tiene ".$edad." años";
+echo "¡Muchas gracias!"
+//echo $nombre." ".$apellido." tiene ".$edad." años";
 ?>
