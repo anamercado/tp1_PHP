@@ -85,60 +85,74 @@
             </article>
         </section>
     </main>
+
     <!-- GALERIA-->
-  <section class="container-fluid container-galeria py-4 mt-3 d-none d-md-block" id="scrollspyHeading4">
+    <section class="container-fluid container-galeria py-4 mt-3 d-none d-md-block" id="scrollspyHeading4">
 
-    <h2 class="text-center justify-content-center py-4">Galería</h2>
+        <h2 class="text-center justify-content-center py-4">Galería</h2>
 
-    <div class="row">
-        <?php for ($i=0; $i<count($imagenes); $i++) { ?>
+        <div class="row">
+            <?php for ($i = 0; $i < count($imagenes); $i++) { ?>
             <div class="col-12 col-lg-2 col-md-3 col-sm-4 px-0">
-                    <img src="img/Galeria/<?php echo $imagenes[$i]; ?>.jpg" alt="">
-        <?php };?>
-    </div>
-    </div>
-</section>
-
-<!-- FIN GALERIA-->
+                <img src="img/Galeria/<?php echo $imagenes[$i]; ?>.jpg" class="img-fluid" alt="">
+            </div>
+            <?php } ?>
+        </div>
+    </section>
+    <!-- FIN GALERIA-->
 
     <?php
 	if(isset($_POST['error'])){
 		echo '<p style="color:red;">Por favor, complete todos los campos obligatorios y asegúrese de que la edad sea un número entre 18 y 100.</p>';
 	} ?>
     
+	<div class="container">
+        <form action="datos.php" method="POST">
+            <div class="form-group">
+                <label for = "Nombre"> Nombre: *</label><br>
+                <input id = "Nombre" type="text" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label>Email: *</label><br>
+                <input type="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label>Edad:</label><br>
+                <input type="number" name="edad" min="18" max="100">
+            </div>
+            <div class="form-group mt-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="opcion1" value="opcion1" required>
+                    <label class="form-check-label">Aceptar Términos y Condiciones *</label>
+                </div>
+            </div>
+            <div class="form-group mt-1">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="opcion2" value="opcion2">
+      		        <label class="form-check-label">Recibir actualizaciones por correo electrónico</label>
+    	        </div>
+            </div>
+            <div class="form-group mt-1">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="opcion3" value="opcion3">
+                    <label class="form-check-label">Aceptar recibir ofertas especiales y promociones</label>
+                </div>
+            </div>
+            <div class="form-group mt-1">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="opcion4" value="opcion4">
+                    <label class="form-check-label">Check si sos campeón del mundo</label>
+                </div>
+            </div>
+            <div class="form-group mt-2">
+                <label>Mensaje:</label>
+                <textarea class="form-control" name="mensaje" rows="5"></textarea>
+            </div>
+            <button class="btn btn-primary mt-2 " type="submit">Enviar</button>
+            <p class="text-muted">* Campos obligatorios</p>
+        </form>
+    </div>
 	
-	<form action="datos.php" method="POST">
-		<label for = "Nombre"> Nombre: *</label><br>
-		<input id = "Nombre" type="text" name="nombre" required><br><br>
-		<label>Email: *</label><br>
-		<input type="email" name="email" required><br><br>
-		<label>Edad:</label><br>
-		<input type="number" name="edad" min="18" max="100"><br><br>
-        <label>
-            <input type="checkbox" name="opcion1" value="opcion1" required>
-            * Aceptar Términos y Condiciones.
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="opcion2" value="opcion2">
-            Recibir actualizaciones por correo electrónico.
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="opcion3" value="opcion3">
-            Acepto recibir ofertas especiales y promociones.
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="opcion4" value="opcion4">
-            Check si sos campeón del mundo.
-        </label>
-        <br>
-		<label>Mensaje:</label><br>
-		<textarea name="mensaje" rows="5"></textarea><br><br>
-		<input type="submit" value="Enviar">
-	</form>
-	<p>* Campos obligatorios</p>
     
     <footer>
         <ul>
