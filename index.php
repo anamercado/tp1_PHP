@@ -143,12 +143,12 @@
             <h1 id="Contacto" class="mb-2">Contacto</h1>
             <form action="datos.php" method="POST">
                 <div class="form-group">
-                    <label for = "Nombre"> Nombre: *</label><br>
-                    <input id = "Nombre" type="text" name="nombre" required>
+                    <label for = "Nombre"> Nombre: (*)</label><br>
+                    <input id = "Nombre" type="text" name="nombre" placeholder="Escribe tu nombre"required>
                 </div>
                 <div class="form-group">
-                    <label>Email: *</label><br>
-                    <input type="email" name="email" required>
+                    <label>Email: (*)</label><br>
+                    <input type="email" name="email" placeholder="Escribe tu email" required>
                 </div>
                 <div class="form-group">
                     <label>Edad:</label><br>
@@ -157,7 +157,7 @@
                 <div class="form-group mt-2">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="opcion1" value="opcion1" required>
-                        <label class="form-check-label">Aceptar Términos y Condiciones *</label>
+                        <label class="form-check-label">Aceptar Términos y Condiciones (*)</label>
                     </div>
                 </div>
                 <div class="form-group mt-1">
@@ -180,10 +180,10 @@
                 </div>
                 <div class="form-group mt-2">
                     <label>Mensaje:</label>
-                    <textarea class="form-control" name="mensaje" rows="5"></textarea>
+                    <textarea class="form-control" name="mensaje" rows="5" placeholder="Escribe tu consulta..."></textarea>
                 </div>
                 <button class="btn btn-primary mt-2 " type="submit">Enviar</button>
-                <p class="text-muted">* Campos obligatorios</p>
+                <p class="text-muted">(*) Campos obligatorios</p>
             </form>
         </div>
 	
