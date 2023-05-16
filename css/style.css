@@ -194,4 +194,14 @@ footer {
     height: 250px;
 }
 
+.mi-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .custom-list li {
+    margin-bottom: 10px;
+  }
+  
 /* FIN?*/

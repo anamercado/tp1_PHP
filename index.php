@@ -16,23 +16,23 @@
 </head>
 
 <body>
-<header>
-        <div class="contenedor-header">
-            <img src="img/logo.svg" alt="La Librería | Libros Fantásticos">
-            <nav>
-                <ul>
-                    <li><a class="nav" href="#Home">Home</a></li>
-                    <li><a class="nav" href="#Novedades">Novedades</a></li>
-                    <li><a class="nav" href="#SobreNosotros">Sobre Nosotros</a></li>
-                    <li><a class="nav" href="#Contacto">Contacto</a></li>
-                </ul>
-            </nav>
-            <form class="buscar" action="" method="GET">
-                <label for="busqueda"></label>
-                <input id="busqueda" name="busqueda" type="text" placeholder="Buscá tu libro">
-                <button id="buscar" name="buscar" aria-label="buscar contenido"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
+    <header>
+            <div class="contenedor-header">
+                <img src="img/logo.svg" alt="La Librería | Libros Fantásticos">
+                <nav>
+                    <ul>
+                        <li><a class="nav" href="#Home">Home</a></li>
+                        <li><a class="nav" href="#Novedades">Novedades</a></li>
+                        <li><a class="nav" href="#SobreNosotros">Sobre Nosotros</a></li>
+                        <li><a class="nav" href="#Contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+                <form class="buscar" action="" method="GET">
+                    <label for="busqueda"></label>
+                    <input id="busqueda" name="busqueda" type="text" placeholder="Buscá tu libro">
+                    <button id="buscar" name="buscar" aria-label="buscar contenido"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
     </header>
 
     <main role="main">
@@ -143,8 +143,12 @@
             <h1 id="Contacto" class="mb-2">Contacto</h1>
             <form action="datos.php" method="POST">
                 <div class="form-group">
-                    <label for = "Nombre"> Nombre: (*)</label><br>
-                    <input id = "Nombre" type="text" name="nombre" placeholder="Escribe tu nombre"required>
+                    <label for = "nombre"> Nombre: (*)</label><br>
+                    <input id = "nombre" type="text" name="nombre" placeholder="Escribe tu nombre"required>
+                </div>
+                <div class="form-group">
+                    <label for = "apellido"> Apellido: (*)</label><br>
+                    <input id = "apellido" type="text" name="apellido" placeholder="Escribe tu apellido" required>
                 </div>
                 <div class="form-group">
                     <label>Email: (*)</label><br>
@@ -156,25 +160,25 @@
                 </div>
                 <div class="form-group mt-2">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="opcion1" value="opcion1" required>
+                        <input class="form-check-input" type="checkbox" name="Aceptar Términos y Condiciones" value="SI" required>
                         <label class="form-check-label">Aceptar Términos y Condiciones (*)</label>
                     </div>
                 </div>
                 <div class="form-group mt-1">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="opcion2" value="opcion2">
+                        <input class="form-check-input" type="checkbox" name="Actualizaciones por correo" value="SI">
                         <label class="form-check-label">Recibir actualizaciones por correo electrónico</label>
                     </div>
                 </div>
                 <div class="form-group mt-1">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="opcion3" value="opcion3">
+                        <input class="form-check-input" type="checkbox" name="Recibir ofertas y promociones." value="SI">
                         <label class="form-check-label">Aceptar recibir ofertas especiales y promociones</label>
                     </div>
                 </div>
                 <div class="form-group mt-1">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="opcion4" value="opcion4">
+                        <input class="form-check-input" type="checkbox" name="Sos campeón del mundo." value="SI">
                         <label class="form-check-label">Check si sos campeón del mundo</label>
                     </div>
                 </div>
