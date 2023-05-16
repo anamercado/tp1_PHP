@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Librería | Libros Fantásticos</title>
     <link rel="stylesheet" href="css/style.css">
-    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 
 <body>
@@ -118,16 +118,13 @@
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1641.9021991020604!2d-58.391407909870026!3d-34.609107355353515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac32291c5c5%3A0x622457900e987e8d!2sAv.%20Rivadavia%201725%2C%20C1089%20CABA!5e0!3m2!1ses-419!2sar!4v1646677440353!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy"></iframe>
         </section>
-        <section id="Contacto">
-            <h1>Contacto</h1>
+        <section class="mt-3">
+            <h1>Galería</h1>
         </section>
     </main>
 
     <!-- GALERIA-->
     <section class="container-fluid container-galeria py-4 mt-3 d-none d-md-block" id="scrollspyHeading4">
-
-        <h2 class="text-center justify-content-center py-4">Galería</h2>
-
         <div class="row">
             <?php for ($i = 0; $i < count($imagenes); $i++) { ?>
             <div class="col-12 col-lg-2 col-md-3 col-sm-4 px-0">
@@ -142,53 +139,53 @@
 	if(isset($_POST['error'])){
 		echo '<p style="color:red;">Por favor, complete todos los campos obligatorios y asegúrese de que la edad sea un número entre 18 y 100.</p>';
 	} ?>
-    
-	<div class="container">
-        <form action="datos.php" method="POST">
-            <div class="form-group">
-                <label for = "Nombre"> Nombre: *</label><br>
-                <input id = "Nombre" type="text" name="nombre" required>
-            </div>
-            <div class="form-group">
-                <label>Email: *</label><br>
-                <input type="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label>Edad:</label><br>
-                <input type="number" name="edad" min="18" max="100">
-            </div>
-            <div class="form-group mt-2">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="opcion1" value="opcion1" required>
-                    <label class="form-check-label">Aceptar Términos y Condiciones *</label>
+        <div class="container">
+            <h1 id="Contacto" class="mb-2">Contacto</h1>
+            <form action="datos.php" method="POST">
+                <div class="form-group">
+                    <label for = "Nombre"> Nombre: *</label><br>
+                    <input id = "Nombre" type="text" name="nombre" required>
                 </div>
-            </div>
-            <div class="form-group mt-1">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="opcion2" value="opcion2">
-      		        <label class="form-check-label">Recibir actualizaciones por correo electrónico</label>
-    	        </div>
-            </div>
-            <div class="form-group mt-1">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="opcion3" value="opcion3">
-                    <label class="form-check-label">Aceptar recibir ofertas especiales y promociones</label>
+                <div class="form-group">
+                    <label>Email: *</label><br>
+                    <input type="email" name="email" required>
                 </div>
-            </div>
-            <div class="form-group mt-1">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="opcion4" value="opcion4">
-                    <label class="form-check-label">Check si sos campeón del mundo</label>
+                <div class="form-group">
+                    <label>Edad:</label><br>
+                    <input type="number" name="edad" min="18" max="100">
                 </div>
-            </div>
-            <div class="form-group mt-2">
-                <label>Mensaje:</label>
-                <textarea class="form-control" name="mensaje" rows="5"></textarea>
-            </div>
-            <button class="btn btn-primary mt-2 " type="submit">Enviar</button>
-            <p class="text-muted">* Campos obligatorios</p>
-        </form>
-    </div>
+                <div class="form-group mt-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="opcion1" value="opcion1" required>
+                        <label class="form-check-label">Aceptar Términos y Condiciones *</label>
+                    </div>
+                </div>
+                <div class="form-group mt-1">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="opcion2" value="opcion2">
+                        <label class="form-check-label">Recibir actualizaciones por correo electrónico</label>
+                    </div>
+                </div>
+                <div class="form-group mt-1">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="opcion3" value="opcion3">
+                        <label class="form-check-label">Aceptar recibir ofertas especiales y promociones</label>
+                    </div>
+                </div>
+                <div class="form-group mt-1">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="opcion4" value="opcion4">
+                        <label class="form-check-label">Check si sos campeón del mundo</label>
+                    </div>
+                </div>
+                <div class="form-group mt-2">
+                    <label>Mensaje:</label>
+                    <textarea class="form-control" name="mensaje" rows="5"></textarea>
+                </div>
+                <button class="btn btn-primary mt-2 " type="submit">Enviar</button>
+                <p class="text-muted">* Campos obligatorios</p>
+            </form>
+        </div>
 	
     
     <footer>
