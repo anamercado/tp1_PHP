@@ -1,68 +1,197 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* ESTILOS GENERALES */
 :root {
-    --color-texto: #07020D;
-    --borde-de-articulos: 5px solid #5DB7DE;
-    --color-fondo: #F1E9DB;
+    --color-negro:#07020D;
+    --color-blanco:#FFFFFF;
+    --color-blanco-2:#F1E9DB;
+    --color-acento:#5DB7DE;
+    --color-marron1:#A39B8B;
+    --color-marron2:#716A5C;
 }
-/**{
-    font-family: 'Montserrat', sans-serif;
+
+/* Estilos globales */
+* {
+    box-sizing: border-box;
     text-decoration: none;
-    outline: none;
-}*/
-.colores {
-    /*color: #07020D;*/
-    color: #FFFFFF;
-    color: #F1E9DB;
-    color: #5DB7DE;
-    color: #A39B8B;
-    color: #716A5C;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    color: var(--color-negro);
+    background-color: var(--color-blanco-2);
     margin: 0;
-    color: #07020D;
-}
-
-header {
-    background-color:#07020D;
-    text-align: center;
-    padding: 16px;
+    line-height: 1.5;
 }
 
 section {
+    width: 1250px;
     text-align: center;
-    margin: 25px 0;
-}
-
-article {
-    margin: 15px 0;
+    margin: 25px auto;
 }
 
 h1 {
     font-size: 36px;
-    line-height: 1.5;
     font-weight: 400;
 }
 
 h2 {
-    font-size: 28px;
-    line-height: 1.5;
+    font-size: 16px;
     font-weight: 400;
+    margin: 0;
 }
 
 h3 {
     font-size: 24px;
-    line-height: 1.5;
     font-weight: 400;
+    margin: 0;
 }
 
-footer {
-    background-color: #716A5C;
-    color: #F1E9DB;
+/* Encabezado, barra de navegación */
+header {
+    background-color:var(--color-negro);
     text-align: center;
-    padding-top: 75px;
-    height: 150px;
+    padding: 35px 0 20px;
 }
+
+header ul,
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+}
+
+header li,
+footer li {
+    display: inline-block;
+    margin: 8px;
+}
+
+.contenedor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1250px;
+    margin: 0 auto;
+}
+
+/* Links barra de navegación */
+a.nav:link, a.nav:visited {
+    color: var(--color-blanco-2);
+    display: inline-block;
+    margin: 0 16px;
+}
+
+a.nav:hover, a.nav:active {
+    color: var(--color-acento);
+}
+
+/* Sección de Bienvenida y Novedades */
+#bienvenida {
+    height: 450px;
+
+    background-image: url('../img/bienvenida_sm.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bienvenidaTitulo {
+    background-color: var(--color-negro);
+    color: var(--color-blanco-2);
+    padding: 20px;
+    width: 1250px;
+}
+
+/* Novedades */
+.contenedor-novedades {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+article {
+    flex-basis: 247px;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+a.novedades:link,
+a.novedades:visited {
+    display: block;
+    color: var(--color-negro);
+    text-decoration: none;
+    border: 3px solid var(--color-acento);
+    padding: 12px 24px;
+    border-radius: 16px;
+}
+
+a.novedades:hover,
+a.novedades:active {
+    background-color: var(--color-acento);
+    border: 3px solid var(--color-negro);
+}
+
+
+/* Sobre Nosotros */
+.contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 16px;
+    padding-top: 32px;
+}
+
+.direccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.direccion > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.direccion > ul > li {
+    display: inline-block;
+}
+
+#SobreNosotros video {
+    width: 65%;
+    height: auto;
+}
+
+#SobreNosotros p {
+    line-height: 20px;
+}
+
+#SobreNosotros i {
+    font-size: 32px;
+    margin-right: 32px;
+}
+
+#SobreNosotros iframe {
+    display: block;
+    width: 1250px;
+    margin: 32px auto;
+    border: none;
+    height: 600px;
+}
+
+/* Footer, Pié de página */
+footer {
+    background-color: var(--color-marron1);
+    color: var(--color-blanco-2);
+    font-weight: 600;
+    line-height: 1.8;
+    text-align: center;
+
+    padding-top: 75px;
+    height: 250px;
+}
+
+/* FIN?*/

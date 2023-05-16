@@ -6,85 +6,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Librería | Libros Fantásticos</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/56cde7d9be.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <img src="img/logo.svg" alt="La Librería | Libros Fantásticos">
-        <nav>
-            <ul>
-                <!-- ACA HAY QUE METER SCROLL-->
-                <li><a href="catalogo.html">Catálogo</a></li>
-                <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-        </nav>
+        <div class="contenedor-header">
+            <img src="img/logo.svg" alt="La Librería | Libros Fantásticos">
+            <nav>
+                <ul>
+                    <li><a class="nav" href="#Home">Home</a></li>
+                    <li><a class="nav" href="#Novedades">Novedades</a></li>
+                    <li><a class="nav" href="#SobreNosotros">Sobre Nosotros</a></li>
+                    <li><a class="nav" href="#Contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <form class="buscar" action="" method="GET">
+                <label for="busqueda"></label>
+                <input id="busqueda" name="busqueda" type="text" placeholder="Buscá tu libro">
+                <button id="buscar" name="buscar" aria-label="buscar contenido"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
     </header>
 
     <main role="main">
-        <section>
+        <section id="Home">
             <h1>Bienvenidos a La Librería</h1>
             <img src="img/bienvenida_sm.jpg" alt="La Librería, tienda online de libros fantásticos">
         </section>
-
-        <section>
+        <section id="Novedades">
             <h1>Novedades</h1>
+            <div class="contenedor-novedades">
+                <article>
+                    <img src="img/01.jpg" alt="H.P. Lovecraft, Obras Completas">
+                    <h2>H.P. Lovecraft</h2>
+                    <h3>H.P. Lovecraft, Obras Completas</h3>
+                    <a class="novedades" href="#">Ver reseña</a>
+                </article>
+                <article>
+                    <img src="img/02.jpg" alt="Las Crónicas Completas de Conan">
+                    <h2>Robert E. Howard</h2>
+                    <h3>Las Crónicas Completas de Conan</h3>
+                    <a class="novedades" href="#">Ver reseña</a>
+                </article>
+                <article>
+                    <img src="img/03.jpg" alt="Los Hijos de Húrin">
+                    <h2>J.R.R. Tolkien</h2>
+                    <h3>Los Hijos de Húrin</h3>
+                    <a class="novedades" href="#">Ver reseña</a>
+                </article>
+                <article>
+                    <img src="img/04.jpg" alt="El Silmarillion">
+                    <h2>J.R.R. Tolkien</h2>
+                    <h3>El Silmarillion</h3>
+                    <a class="novedades" href="#">Ver reseña</a>
+                </article>
+                <article>
+                    <img src="img/05.jpg" alt="Duna">
+                    <h2>Frank Herbert</h2>
+                    <h3>Duna</h3>
+                    <a class="novedades" href="#">Ver reseña</a>
+                </article>
+                <article>
+                    <img src="img/06.jpg" alt="Esfera">
+                    <h2>Michael Chrichton</h2>
+                    <h3>Esfera</h3>
+                    <a class="novedades" href="#">Ver reseña</a>
+                </article>
+                <article>
+                    <img src="img/07.jpg" alt="Los cuentos y poemas de Edgar Allan Poe">
+                    <h2>Edgar Allan Poe</h2>
+                    <h3>Los cuentos y poemas de Edgar Allan Poe</h3>
+                    <a class="novedades" href="#">Ver reseña</a>
+                </article>
+                <article>
+                    <img src="img/08.jpg" alt="Obras Completas de William Shakespeare">
+                    <h2>William Shakespeare</h2>
+                    <h3>Obras Completas de William Shakespeare</h3>
+                    <a class="novedades" href="#">Ver reseña</a>
+                </article>
+            </div>
+        </section>
+        <section id="SobreNosotros">
+            <h1>Sobre Nosotros</h1>
+            <div class="contenido">
+                <video autoplay muted loop>
+                    <source src="media/comic-1.mp4" type="video/mp4">
+                </video>
 
-            <article>
-                <img src="img/01.jpg" alt="H.P. Lovecraft, Obras Completas">
-                <h2>H.P. Lovecraft</h2>
-                <h3>H.P. Lovecraft, Obras Completas</h3>
-                <a href="#">Ver más</a>
-            </article>
+                <div class="direccion">
+                    <h1>La Librería</h1>
+                    <p>
+                        Estamos ubicados en el barrio de Congreso <br>
+                        Av. Rivadavia 1755 - CABA | 011-4444-6666 <br>
+                        Lunes a Viernes de 11 a 20hs <br>
+                        contacto@lalibreria.com.ar
+                    </p>
+                    <ul>
+                        <li><i class="fa-brands fa-twitter"></i></li>
+                        <li><i class="fa-brands fa-facebook-square"></i></li>
+                        <li><i class="fa-brands fa-instagram-square"></i></li>
+                    </ul>
+                </div>
+            </div>  
 
-            <article>
-                <img src="img/02.jpg" alt="Las Crónicas Completas de Conan">
-                <h2>Robert E. Howard</h2>
-                <h3>Las Crónicas Completas de Conan</h3>
-                <a href="#">Ver más</a>
-            </article>
-
-            <article>
-                <img src="img/03.jpg" alt="Los Hijos de Húrin">
-                <h2>J.R.R. Tolkien</h2>
-                <h3>Los Hijos de Húrin</h3>
-                <a href="#">Ver más</a>
-            </article>
-
-            <article>
-                <img src="img/04.jpg" alt="El Silmarillion">
-                <h2>J.R.R. Tolkien</h2>
-                <h3>El Silmarillion</h3>
-                <a href="#">Ver más</a>
-            </article>
-
-            <article>
-                <img src="img/05.jpg" alt="Duna">
-                <h2>Frank Herbert</h2>
-                <h3>Duna</h3>
-                <a href="#">Ver más</a>
-            </article>
-
-            <article>
-                <img src="img/06.jpg" alt="Esfera">
-                <h2>Michael Chrichton</h2>
-                <h3>Esfera</h3>
-                <a href="#">Ver más</a>
-            </article>
-
-            <article>
-                <img src="img/07.jpg" alt="Los cuentos y poemas de Edgar Allan Poe">
-                <h2>Edgar Allan Poe</h2>
-                <h3>Los cuentos y poemas de Edgar Allan Poe</h3>
-                <a href="#">Ver más</a>
-            </article>
-
-            <article>
-                <img src="img/08.jpg" alt="Obras Completas de William Shakespeare">
-                <h2>William Shakespeare</h2>
-                <h3>Obras Completas de William Shakespeare</h3>
-                <a href="#">Ver más</a>
-            </article>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1641.9021991020604!2d-58.391407909870026!3d-34.609107355353515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac32291c5c5%3A0x622457900e987e8d!2sAv.%20Rivadavia%201725%2C%20C1089%20CABA!5e0!3m2!1ses-419!2sar!4v1646677440353!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+        <section id="Contacto">
+            <h1>Contacto</h1>
         </section>
     </main>
 
