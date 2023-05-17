@@ -27,11 +27,11 @@
                         <li><a class="nav" href="#Contacto">Contacto</a></li>
                     </ul>
                 </nav>
-                <form class="buscar" action="" method="GET">
-                    <label for="busqueda"></label>
-                    <input id="busqueda" name="busqueda" type="text" placeholder="Buscá tu libro">
-                    <button id="buscar" name="buscar" aria-label="buscar contenido"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
+            <form class="buscar" action="" method="GET">
+                <label for="busqueda"></label>
+                <input id="busqueda" name="busqueda" type="text" placeholder="Buscá tu libro">
+                <button id="buscar" name="buscar" aria-label="buscar contenido"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
             </div>
     </header>
 
@@ -135,39 +135,41 @@
     </section>
     <!-- FIN GALERIA-->
 
+
     <?php
 	if(isset($_POST['error'])){
 		echo '<p style="color:red;">Por favor, complete todos los campos obligatorios y asegúrese de que la edad sea un número entre 18 y 100.</p>';
 	} ?>
         <div class="container">
             <h1 id="Contacto" class="mb-2">Contacto</h1>
-            <form action="datos.php" method="POST">
+            <form class="formulario" action="datos.php" method="POST">
                 <div class="form-group">
-                    <label for = "nombre"> Nombre: (*)</label><br>
-                    <input id = "nombre" type="text" name="nombre" placeholder="Escribe tu nombre"required>
+                    <label class="form-label" for = "nombre"> Nombre: (*)</label><br>
+                    <input class="form-input" id = "nombre" type="text" name="nombre" placeholder="Escribe tu nombre"required>
                 </div>
                 <div class="form-group">
-                    <label for = "apellido"> Apellido: (*)</label><br>
-                    <input id = "apellido" type="text" name="apellido" placeholder="Escribe tu apellido" required>
+                    <label class="form-label" for = "apellido"> Apellido: (*)</label><br>
+                    <input class="form-input" id = "apellido" type="text" name="apellido" placeholder="Escribe tu apellido" required>
                 </div>
                 <div class="form-group">
-                    <label>Email: (*)</label><br>
-                    <input type="email" name="email" placeholder="Escribe tu email" required>
+                    <label class="form-label">Email: (*)</label><br>
+                    <input class="form-input" type="email" name="email" placeholder="Escribe tu email" required>
                 </div>
                 <div class="form-group">
-                    <label>Edad:</label><br>
-                    <input type="number" name="edad" min="18" max="100">
+                    <label class="form-label">Edad:</label><br>
+                    <input class="form-input" type="number" name="edad" min="18" max="100">
                 </div>
-                <div class="form-group mt-2">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="Aceptar Términos y Condiciones" value="SI" required>
-                        <label class="form-check-label">Aceptar Términos y Condiciones (*)</label>
+                <div class="form-group mt-2 ">
+                    <div class="form-check p-0">
+                        <label>¿Te gustaría recibir novedades por email? <br></label>
+                        <input class="m-3 opciones" type="radio" name="newsletter" value="si" checked>Si        
+                        <input class="m-3 opciones" type="radio" name="newsletter" value="no">No
                     </div>
                 </div>
                 <div class="form-group mt-1">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="Actualizaciones por correo" value="SI">
-                        <label class="form-check-label">Recibir actualizaciones por correo electrónico</label>
+                        <input class="form-check-input" type="checkbox" name="Aceptar Términos y Condiciones" value="SI" required>
+                        <label class="form-check-label">Aceptar Términos y Condiciones (*)</label>
                     </div>
                 </div>
                 <div class="form-group mt-1">
